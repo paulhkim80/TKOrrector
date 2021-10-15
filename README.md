@@ -53,7 +53,7 @@ It is recommended that you run the Trainig on a machine with Nvidia GPU with dri
 
 You can run the pretrained model without the need to Train.  
 
-Download [the pretrained model](https://storage.cloud.google.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz) and extract into the current directory (`tar zxvf TKOrrector.tar.gz`)
+Download [the pretrained model](https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz) and extract into the current directory (`tar zxvf TKOrrector.tar.gz`)
 
 `sh demo.sh`  
 

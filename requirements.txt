@@ -1,2 +1,2 @@
-fairseq==0.10.2
-hangul-utils==0.4.5
+fairseq
+hangul-utils
