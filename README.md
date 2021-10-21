@@ -53,9 +53,17 @@ It is recommended that you run the Trainig on a machine with Nvidia GPU with dri
 
 You can run the pretrained model without the need to Train.  
 
-Download [the pretrained model](https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz) and extract into the current directory (`tar zxvf TKOrrector.tar.gz`)
+1. Download [the pretrained model](https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz) and extract into the current directory (`tar zxvf TKOrrector.tar.gz`)
 
-`sh demo.sh`  
+2. `sh demo.sh`  
+
+OR
+
+1. Run a pre-packaged container with pretrained model already downloaded.  
+   
+2. docker run -it paulhkim80/tkorrector
+
+
 
 Example demo run screen and results.  
 ![Example Demo Run](example-run.png)
