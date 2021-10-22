@@ -36,4 +36,4 @@ WORKDIR /workspace/TKOrrector
 RUN wget https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz && \
     tar zxvf TKOrrector.tar.gz 
 
-CMD bash demo.sh
+CMD bash demo_realtime.sh
