@@ -61,7 +61,7 @@ OR
 
 1. Run a pre-packaged container with pretrained model already downloaded.  
    
-2. docker run -it paulhkim80/tkorrector:0.1
+2. docker run -it paulhkim80/tkorrector
 
 
 
