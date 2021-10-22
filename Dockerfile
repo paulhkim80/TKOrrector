@@ -21,6 +21,8 @@ RUN apt-get update && \
     python3.9 python3-pip python-is-python3 tzdata apt-utils autoconf automake  && \
     wget https://corretto.aws/downloads/latest/amazon-corretto-8-x64-linux-jdk.deb && \
     dpkg -i amazon-corretto-8-x64-linux-jdk.deb && \
+    pip3 install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio==0.10.0+cu113 \
+    -f https://download.pytorch.org/whl/cu113/torch_stable.html && \
     git clone https://github.com/paulhkim80/hangul-utils.git && \
     git clone https://github.com/paulhkim80/TKOrrector.git && \
     git clone https://github.com/pytorch/fairseq.git
