@@ -27,15 +27,15 @@ RUN apt-get update && \
     git clone https://github.com/paulhkim80/TKOrrector.git && \
     git clone https://github.com/pytorch/fairseq.git
 
-WORKDIR /workspace/hangul-utils
+WORKDIR /hangul-utils
 RUN bash install_mecab_ko.sh && \
     bash install_twkorean.sh && \
     python setup.py install
 
-WORKDIR /workspace/fairseq
+WORKDIR /fairseq
 RUN pip3 install --editable ./
 
-WORKDIR /workspace/TKOrrector
+WORKDIR /TKOrrector
 RUN wget https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz && \
     tar zxvf TKOrrector.tar.gz 
 
