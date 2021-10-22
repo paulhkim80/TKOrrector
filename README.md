@@ -53,18 +53,19 @@ It is recommended that you run the Trainig on a machine with Nvidia GPU with dri
 
 You can run the pretrained model without the need to Train.  
 
-1. Download [the pretrained model](https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz) and extract into the current directory (`tar zxvf TKOrrector.tar.gz`)
+1. Download [the pretrained model](https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz) and extract into the current directory (`tar zxvf TKOrrector.tar.gz`).
 
 1. `sh demo.sh`  
 
 OR
 
-1. `sh demo_realtime.sh` for Realtime correction instead of waiting until press of Enter key (GPU recommended)
+1. `sh demo_realtime.sh` for Realtime correction instead of waiting until press of Enter key (GPU recommended).
 
 OR
 
 1. Run a pre-packaged container with pretrained model already downloaded.  
-1. docker run -it paulhkim80/tkorrector
+1. docker run --gpus all -it paulhkim80/tkorrector  
+**Note:** paulhkim80/tkorrector:0.2 and after (latest) have real-time correction as the startup script. Recommend running the image on a node with Nvidia GPU (--gpus all) for best experience.
 
 Example demo run screen and results.  
 ![Example Demo Run](example-run.png)

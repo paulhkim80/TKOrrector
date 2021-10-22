@@ -32,6 +32,9 @@ corrector = TransformerModel.from_pretrained(
     targetlang='en'
 )
 
+# Move model to GPU for faster translation
+corrector.cuda()
+
 tokenizer = get_tokenizer('jaso')
 
 def translate(inStr):

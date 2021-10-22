@@ -12,17 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ARG BASE_IMAGE=nvcr.io/nvidia/pytorch:21.09-py3
+ARG BASE_IMAGE=nvidia/cuda:11.4.2-runtime-ubuntu20.04
 
 FROM $BASE_IMAGE as base
 
 RUN apt-get update && \
-    apt-get install sudo java-common && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y sudo java-common wget git make gcc g++ \
+    python3.9 python3-pip python-is-python3 tzdata apt-utils autoconf automake  && \
     wget https://corretto.aws/downloads/latest/amazon-corretto-8-x64-linux-jdk.deb && \
     dpkg -i amazon-corretto-8-x64-linux-jdk.deb && \
     git clone https://github.com/paulhkim80/hangul-utils.git && \
     git clone https://github.com/paulhkim80/TKOrrector.git && \
-    git clone https://github.com/pytorch/fairseq.git 
+    git clone https://github.com/pytorch/fairseq.git
 
 WORKDIR /workspace/hangul-utils
 RUN bash install_mecab_ko.sh && \
