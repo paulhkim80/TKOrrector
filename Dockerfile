@@ -14,7 +14,13 @@
 
 ARG BASE_IMAGE=nvidia/cuda:11.4.2-runtime-ubuntu20.04
 
+# Pretrained model file names are: small, medium, large, xlarge
+ARG MODEL_FILE=large
+
 FROM $BASE_IMAGE as base
+
+# Non-GPU Enabled: demo.sh, GPU Enabled: demo_realtime.sh
+ENV STARTUP_CMD demo_realtime.sh
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y sudo java-common wget git make gcc g++ \
@@ -36,8 +42,8 @@ WORKDIR /fairseq
 RUN pip3 install --editable ./
 
 WORKDIR /TKOrrector
-RUN wget https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz && \
-    tar zxvf TKOrrector.tar.gz  && \
+RUN wget https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector_$MODEL_FILE.tar.gz && \
+    tar zxvf TKOrrector_$MODEL_FILE.tar.gz && \
     touch data/bin/train.fr-en.en.idx
 
-CMD bash demo_realtime.sh
+CMD bash $STARTUP_CMD
