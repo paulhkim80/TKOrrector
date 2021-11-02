@@ -14,11 +14,10 @@
 
 ARG BASE_IMAGE=nvidia/cuda:11.4.2-runtime-ubuntu20.04
 
-# Pretrained model file names are: small, medium, large, xlarge
-ARG MODEL_FILE=large
-
 FROM $BASE_IMAGE as base
 
+# Pretrained model file names are: small, medium, large, xlarge
+ARG MODEL_FILE=large
 # Non-GPU Enabled: demo.sh, GPU Enabled: demo_realtime.sh
 ENV STARTUP_CMD demo_realtime.sh
 
