@@ -37,6 +37,7 @@ RUN pip3 install --editable ./
 
 WORKDIR /TKOrrector
 RUN wget https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector.tar.gz && \
-    tar zxvf TKOrrector.tar.gz 
+    tar zxvf TKOrrector.tar.gz  && \
+    touch data/bin/train.fr-en.en.idx
 
 CMD bash demo_realtime.sh
