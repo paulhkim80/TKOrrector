@@ -42,8 +42,8 @@ WORKDIR /fairseq
 RUN pip3 install --editable ./
 
 WORKDIR /TKOrrector
-RUN wget https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector_$MODEL_FILE.tar.gz && \
-    tar zxvf TKOrrector_$MODEL_FILE.tar.gz && \
+RUN wget https://storage.googleapis.com/paulsandbox_asia/TKOrrector/TKOrrector_${MODEL_FILE}.tar.gz && \
+    tar zxvf TKOrrector_${MODEL_FILE}.tar.gz && \
     touch data/bin/train.fr-en.en.idx
 
 CMD bash $STARTUP_CMD
