@@ -28,8 +28,8 @@ corrector = TransformerModel.from_pretrained(
     CHECKPOINT_DIR,
     CHECKPOINT_FILE,
     '../../data/bin/',
-    sourcelang='fr',
-    targetlang='en'
+    source_lang='fr',
+    target_lang='en'
 )
 
 # Move model to GPU for faster translation

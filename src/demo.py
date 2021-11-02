@@ -26,8 +26,8 @@ def translate():
         CHECKPOINT_DIR,
         CHECKPOINT_FILE,
         '../../data/bin/',
-        sourcelang='fr',
-        targetlang='en'
+        source_lang='fr',
+        target_lang='en'
     )
 
     tokenizer = get_tokenizer('jaso')
