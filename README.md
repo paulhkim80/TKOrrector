@@ -64,7 +64,7 @@ OR
 OR
 
 1. Run a pre-packaged container with pretrained model already downloaded.  
-1. docker run --gpus all -it paulhkim80/tkorrector  
+1. docker run --gpus all -it [paulhkim80/tkorrector](https://hub.docker.com/r/paulhkim80/tkorrector) 
 OR (revert back to non-realtime, non-gpu accelerated mode)
 1. docker run -e "STARTUP_CMD=demo.sh" -it paulhkim80/tkorrector  
 **Note:** paulhkim80/tkorrector:0.2 and after (latest) have real-time correction as the startup script. Recommend running the image on a node with Nvidia GPU (--gpus all) for best experience.
